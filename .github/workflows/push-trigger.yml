@@ -22,7 +22,7 @@ on:
       - release*
 
 jobs:
-  build-kafka-producer-docker:
+  build-docker:
     strategy:
       matrix:
         include:
@@ -49,6 +49,9 @@ jobs:
             BASE_IMAGE_BUILD: true
           - SERVICE_LOCATION: 'softhsm-backup'
             SERVICE_NAME: 'softhsm-backup'
+            BASE_IMAGE_BUILD: true
+          - SERVICE_LOCATION: 'ubuntu-kubectl-helm'
+            SERVICE_NAME: 'ubuntu-kubectl-helm'
             BASE_IMAGE_BUILD: true
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
