@@ -14,3 +14,4 @@ RUN apt-get update && \
     curl -LO "https://dl.k8s.io/release/v1.28.1/bin/linux/amd64/kubectl" && \
     install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && \
     curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
